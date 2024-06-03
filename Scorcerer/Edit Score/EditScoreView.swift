@@ -1,0 +1,124 @@
+//
+//  EditScoreView.swift
+//  Scorcerer
+//
+//  Created by Madeline Eckhart on 5/22/24.
+//
+
+import SwiftUI
+
+struct EditScoreView: View {
+    @Binding var score: Int
+    @State var calculatorInput: String = "0"
+    @State var operation: MathOperation = .none
+    
+    var isButtonDisabled: Bool {
+        calculatorInput == "0" || operation == .none
+    }
+
+    var body: some View {
+        VStack(spacing: 0) {
+            Spacer()
+                .frame(height: 50)
+            // MARK: Increment by 1
+            HStack(spacing: 32) {
+                Button {
+                    score -= 1
+                    print(score)
+                } label: {
+                    Text("-")
+                }
+                .buttonStyle(ScorcererButtonStyle())
+                
+                Text("\(score)")
+                    .font(.system(size: 75))
+                    .fontWeight(.bold)
+                    .foregroundStyle(.textDark)
+                
+                Button {
+                    score += 1
+                    print(score)
+                } label: {
+                    Text("+")
+                        
+                }
+                .buttonStyle(ScorcererButtonStyle())
+            }
+            
+            // MARK: Increment by other
+            HStack {
+                Button {
+                    score += 5
+                    print(score)
+                } label: {
+                    Text("+ 5")
+                }
+                .buttonStyle(ScorcererButtonStyle(width: 100))
+                
+                Spacer()
+
+                Button {
+                    score += 10
+                    print(score)
+                } label: {
+                    Text("+ 10")
+                }
+                .buttonStyle(ScorcererButtonStyle(width: 100))
+                
+                Spacer()
+
+                Button {
+                    score += 20
+                    print(score)
+                } label: {
+                    Text("+ 20")
+                }
+                .buttonStyle(ScorcererButtonStyle(width: 100))
+            }
+            .padding(.horizontal, 24)
+            .padding(.bottom, 8)
+            
+            CalculatorView(
+                input: $calculatorInput,
+                operation: $operation
+            )
+            
+            Button {
+                switch operation {
+                case .none:
+                    break
+                case .add:
+                    score += Int(calculatorInput) ?? 0
+                case .subtract:
+                    score -= Int(calculatorInput) ?? 0
+                }
+                operation = .none
+                calculatorInput = "0"
+                
+            } label: {
+                HStack {
+                    Spacer()
+                    Text("Done")
+                        .font(.title3)
+                        .fontWeight(.bold)
+                        .foregroundStyle(.textDark)
+                        .padding(.all, 12)
+                    Spacer()
+                }
+            }
+            .disabled(isButtonDisabled)
+            .background(isButtonDisabled ? .black.opacity(0.2) : .white)
+        }
+        .presentationDetents([.height(600)])
+    }
+}
+
+struct EditScore_Preview: PreviewProvider {
+    static var previews: some View {
+        EditScoreView(score: .constant(12))
+    }
+}
+
+/// TODO:
+/// - reusable button
+/// - width when horizontal
