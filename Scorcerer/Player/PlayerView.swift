@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PlayerView: View {
-    @State var player: Player
+    @Binding var player: Player
     @State var showEditScoreOverlay: Bool = false
 
     var body: some View {
@@ -55,12 +55,13 @@ struct PlayerView: View {
 
 #Preview {
     PlayerView(
-        player:
+        player:.constant(
             Player(
                 id: .init(),
                 name: "Maddie",
                 score: 12
             )
+        )
     )
     .padding()
 }

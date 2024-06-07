@@ -18,8 +18,8 @@ struct ContentView: View {
             header
                 .padding(.all, 24)
             List {
-                ForEach(viewModel.playerList, id: \.id) { player in
-                    PlayerView(player: player)
+                ForEach($viewModel.playerList, id: \.id) { $player in
+                    PlayerView(player: $player)
                         .padding(.vertical, 8)
                 }
                 .onDelete { index in
@@ -92,6 +92,3 @@ struct ContentView_Preview: PreviewProvider {
         ContentView(viewModel: ScorcererViewModel(playerList: test))
     }
 }
-
-/// TODO:
-/// - make calulator int instead of string

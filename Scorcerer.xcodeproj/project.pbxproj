@@ -46,6 +46,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C169C0502C12C2DB00975B1F /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				C169C04E2C12A9A500975B1F /* AddPlayerView.swift */,
+				C1F8B51C2BFE6CF100FDF12B /* PlayerView.swift */,
+			);
+			path = Player;
+			sourceTree = "<group>";
+		};
 		C1F8B5002BFE638900FDF12B = {
 			isa = PBXGroup;
 			children = (
@@ -69,9 +78,8 @@
 				C1F8B50C2BFE638900FDF12B /* ScorcererApp.swift */,
 				C1F8B51E2BFEBD9400FDF12B /* ScorcererViewModel.swift */,
 				C1F8B50E2BFE638900FDF12B /* ContentView.swift */,
-				C1F8B51C2BFE6CF100FDF12B /* PlayerView.swift */,
-				C169C04E2C12A9A500975B1F /* AddPlayerView.swift */,
-				C1F8B5252C0104AA00FDF12B /* Edit Score */,
+				C169C0502C12C2DB00975B1F /* Player */,
+				C1F8B5252C0104AA00FDF12B /* Score */,
 				C1F8B5242C00FB1900FDF12B /* Utilities */,
 				C1F8B5122BFE638A00FDF12B /* Preview Content */,
 			);
@@ -95,13 +103,13 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
-		C1F8B5252C0104AA00FDF12B /* Edit Score */ = {
+		C1F8B5252C0104AA00FDF12B /* Score */ = {
 			isa = PBXGroup;
 			children = (
 				C1F8B5202BFF0FA100FDF12B /* EditScoreView.swift */,
 				C1F8B5262C052D5700FDF12B /* CalculatorView.swift */,
 			);
-			path = "Edit Score";
+			path = Score;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

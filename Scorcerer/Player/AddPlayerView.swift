@@ -72,7 +72,7 @@ struct AddPlayerView: View {
         }
         .background(.bright)
         .onAppear {
-            focusedField = .firstName
+            focusedField = .name
         }
     }
 }
