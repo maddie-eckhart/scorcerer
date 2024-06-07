@@ -49,7 +49,10 @@ struct ContentView: View {
             .background(.black.opacity(0.2))
         }
         .sheet(isPresented: $showAddPlayerOverlay) {
-            newPlayerOverlay
+            AddPlayerView(
+                viewModel: viewModel,
+                showAddPlayerOverlay: $showAddPlayerOverlay
+            )
         }
     }
     
@@ -75,64 +78,6 @@ struct ContentView: View {
             }
         }
     }
-
-    @ViewBuilder
-    var newPlayerOverlay: some View {
-        VStack {
-            TextField(
-                "Name",
-                text: $newPlayerName
-            )
-            .font(.title2)
-            .onSubmit {
-                self.viewModel.playerList.append(
-                    Player(
-                        id: .init(),
-                        name: newPlayerName,
-                        score: 0)
-                )
-                showAddPlayerOverlay.toggle()
-                newPlayerName = ""
-            }
-            .disableAutocorrection(true)
-            .textFieldStyle(.roundedBorder)
-            .background(.white)
-            .overlay(
-                RoundedRectangle(cornerRadius: 6)
-                    .stroke(.accent2, lineWidth: 6)
-                
-            )
-            .padding(.top, 100)
-            .padding([.horizontal, .bottom], 24)
-            
-            Button {
-                self.viewModel.playerList.append(
-                    Player(
-                        id: .init(),
-                        name: newPlayerName,
-                        score: 0)
-                )
-                showAddPlayerOverlay.toggle()
-                newPlayerName = ""
-            } label: {
-                Text("Add Player")
-                    .font(.title3)
-                    .fontWeight(.bold)
-                    .foregroundStyle(.textDark)
-                    .padding(.all, 12)
-            }
-            .frame(width: 200)
-            .background(.white)
-            .overlay(
-                RoundedRectangle(cornerRadius: 6)
-                    .strokeBorder(.accent2, lineWidth: 6)
-                    .stroke(.accent1, lineWidth: 6)
-                
-            )
-            Spacer()
-        }
-        .background(.bright)
-    }
 }
 
 struct ContentView_Preview: PreviewProvider {
@@ -149,13 +94,4 @@ struct ContentView_Preview: PreviewProvider {
 }
 
 /// TODO:
-/// - save players?
-/// - dark mode
-/// - edit player
-/// - autofocus keyboard
-/// - little avatars?
 /// - make calulator int instead of string
-/// - live activities to show current scores?
-/// - other tab ideas
-///     - decide first player
-///     - dice tracker

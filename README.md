@@ -11,6 +11,7 @@ A simple score-keeping app.
 - dark mode
 - edit player
 - filter players
+- sort players by score
 
 ### Feature Ideas
 - player avatars

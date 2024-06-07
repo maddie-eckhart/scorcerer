@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C169C04F2C12A9A500975B1F /* AddPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C169C04E2C12A9A500975B1F /* AddPlayerView.swift */; };
 		C1F8B50D2BFE638900FDF12B /* ScorcererApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F8B50C2BFE638900FDF12B /* ScorcererApp.swift */; };
 		C1F8B50F2BFE638900FDF12B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F8B50E2BFE638900FDF12B /* ContentView.swift */; };
 		C1F8B5112BFE638A00FDF12B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1F8B5102BFE638A00FDF12B /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C169C04E2C12A9A500975B1F /* AddPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlayerView.swift; sourceTree = "<group>"; };
 		C1F8B5092BFE638900FDF12B /* Scorcerer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scorcerer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1F8B50C2BFE638900FDF12B /* ScorcererApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScorcererApp.swift; sourceTree = "<group>"; };
 		C1F8B50E2BFE638900FDF12B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 				C1F8B51E2BFEBD9400FDF12B /* ScorcererViewModel.swift */,
 				C1F8B50E2BFE638900FDF12B /* ContentView.swift */,
 				C1F8B51C2BFE6CF100FDF12B /* PlayerView.swift */,
+				C169C04E2C12A9A500975B1F /* AddPlayerView.swift */,
 				C1F8B5252C0104AA00FDF12B /* Edit Score */,
 				C1F8B5242C00FB1900FDF12B /* Utilities */,
 				C1F8B5122BFE638A00FDF12B /* Preview Content */,
@@ -175,6 +178,7 @@
 				C1F8B50F2BFE638900FDF12B /* ContentView.swift in Sources */,
 				C1F8B50D2BFE638900FDF12B /* ScorcererApp.swift in Sources */,
 				C1F8B5212BFF0FA100FDF12B /* EditScoreView.swift in Sources */,
+				C169C04F2C12A9A500975B1F /* AddPlayerView.swift in Sources */,
 				C1F8B51B2BFE6B6200FDF12B /* Color.swift in Sources */,
 				C1F8B5272C052D5700FDF12B /* CalculatorView.swift in Sources */,
 				C1F8B51D2BFE6CF100FDF12B /* PlayerView.swift in Sources */,
