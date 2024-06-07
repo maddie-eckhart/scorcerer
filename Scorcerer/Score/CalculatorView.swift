@@ -22,7 +22,7 @@ struct CalculatorView: View {
                 Text(input)
                     .font(.largeTitle)
                     .fontWeight(.bold)
-                    .foregroundStyle(.textDark)
+                    .foregroundStyle(.caviar)
             }
             .padding(.top, 12)
             .padding([.leading, .trailing])
@@ -47,7 +47,7 @@ struct CalculatorView: View {
             }
         }
         .padding(.bottom, 12)
-        .background(.accent1)
+        .background(.banana)
     }
 }
 

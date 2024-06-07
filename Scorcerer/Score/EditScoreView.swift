@@ -33,7 +33,7 @@ struct EditScoreView: View {
                 Text("\(score)")
                     .font(.system(size: 75))
                     .fontWeight(.bold)
-                    .foregroundStyle(.textDark)
+                    .foregroundStyle(.caviar)
                 
                 Button {
                     score += 1
@@ -101,7 +101,7 @@ struct EditScoreView: View {
                     Text("Done")
                         .font(.title3)
                         .fontWeight(.bold)
-                        .foregroundStyle(.textDark)
+                        .foregroundStyle(.caviar)
                         .padding(.all, 12)
                     Spacer()
                 }

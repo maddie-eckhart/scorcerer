@@ -17,7 +17,7 @@ struct PlayerView: View {
             Text(player.name)
                 .font(.title)
                 .fontWeight(.bold)
-                .foregroundStyle(.textDark)
+                .foregroundStyle(.caviar)
             
             Spacer()
 
@@ -27,7 +27,7 @@ struct PlayerView: View {
                 Text("\(player.score)")
                     .font(.title3)
                     .fontWeight(.bold)
-                    .foregroundStyle(.textDark)
+                    .foregroundStyle(.caviar)
                     .padding(.all, 12)
                     
             }
@@ -35,8 +35,8 @@ struct PlayerView: View {
             .background(.white)
             .overlay(
                 RoundedRectangle(cornerRadius: 6)
-                    .strokeBorder(.accent1, lineWidth: 6)
-                    .stroke(.bright, lineWidth: 6)
+                    .strokeBorder(.mint, lineWidth: 6)
+                    .stroke(.avocado, lineWidth: 6)
                     
             )
         }

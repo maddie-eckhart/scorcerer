@@ -14,50 +14,61 @@ struct Scolor_Preview: PreviewProvider {
                 
             } label: {
                 Spacer()
-                Text("Light")
-                    .foregroundStyle(.textDark)
+                Text("Berry")
+                    .foregroundStyle(.caviar)
                     .padding(.all, 24)
                 Spacer()
             }
-            .background(.light)
+            .background(.berry)
             
             Button {
                 
             } label: {
                 Spacer()
-                Text("Bright")
-                    .foregroundStyle(.textDark)
+                Text("Banana")
+                    .foregroundStyle(.caviar)
                     .padding(.all, 24)
                 Spacer()
             }
-            .background(.bright)
+            .background(.banana)
             
             Button {
                 
             } label: {
                 Spacer()
-                Text("Accent1")
-                    .foregroundStyle(.textDark)
+                Text("Mint")
+                    .foregroundStyle(.caviar)
                     .padding(.all, 24)
                 Spacer()
             }
-            .background(.accent1)
+            .background(.mint)
             
             Button {
                 
             } label: {
                 Spacer()
-                Text("Accent2")
-                    .foregroundStyle(.textDark)
+                Text("Avocado")
+                    .foregroundStyle(.caviar)
                     .padding(.all, 24)
                 Spacer()
             }
-            .background(.accent2)
+            .background(.avocado)
+            
+            Button {
+                
+            } label: {
+                Spacer()
+                Text("Caviar")
+                    .foregroundStyle(.white)
+                    .padding(.all, 24)
+                Spacer()
+            }
+            .background(.caviar)
             
             Text("TextDark")
                 .font(.largeTitle)
                 .fontWeight(.bold)
-                .foregroundStyle(.textDark)
+                .foregroundStyle(.caviar)
         }
     }
 }

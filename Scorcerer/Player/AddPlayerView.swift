@@ -38,7 +38,7 @@ struct AddPlayerView: View {
             .textFieldStyle(.roundedBorder)
             .overlay(
                 RoundedRectangle(cornerRadius: 6)
-                    .stroke(.accent2, lineWidth: 6)
+                    .stroke(.avocado, lineWidth: 6)
                 
             )
             .padding(.top, 100)
@@ -57,20 +57,20 @@ struct AddPlayerView: View {
                 Text("Add Player")
                     .font(.title3)
                     .fontWeight(.bold)
-                    .foregroundStyle(.textDark)
+                    .foregroundStyle(.caviar)
                     .padding(.all, 12)
             }
             .frame(width: 200)
             .background(.white)
             .overlay(
                 RoundedRectangle(cornerRadius: 6)
-                    .strokeBorder(.accent2, lineWidth: 6)
-                    .stroke(.accent1, lineWidth: 6)
+                    .strokeBorder(.mint, lineWidth: 6)
+                    .stroke(.berry, lineWidth: 6)
                 
             )
             Spacer()
         }
-        .background(.bright)
+        .background(.banana)
         .onAppear {
             focusedField = .name
         }

@@ -40,7 +40,7 @@ struct ContentView: View {
                     Image(systemName: "plus")
                         .resizable()
                         .renderingMode(.template)
-                        .foregroundStyle(.textDark)
+                        .foregroundStyle(.caviar)
                         .frame(width: 22, height: 22)
                     Spacer()
                 }
@@ -62,7 +62,7 @@ struct ContentView: View {
             Text("Players")
                 .font(.largeTitle)
                 .fontWeight(.medium)
-                .foregroundStyle(.textDark)
+                .foregroundStyle(.caviar)
 
             Spacer()
             
@@ -73,7 +73,7 @@ struct ContentView: View {
                 Image(systemName: "decrease.indent")
                     .resizable()
                     .renderingMode(.template)
-                    .foregroundStyle(.textDark)
+                    .foregroundStyle(.caviar)
                     .frame(width: 24, height: 18)
             }
         }

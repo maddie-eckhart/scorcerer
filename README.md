@@ -5,13 +5,13 @@ A simple score-keeping app.
 - Add/remove players
 - Edit a player's score by increments of 1, 5, or 10
 - Use a custom calulator to add/subtract from a player's score
+- Sort player list by highest score
 
 ## Future Features
 - save players
 - dark mode
 - edit player
-- filter players
-- sort players by score
+- sort player list by lowest score
 
 ### Feature Ideas
 - player avatars
