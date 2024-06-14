@@ -19,12 +19,11 @@ struct EditScoreView: View {
     var body: some View {
         VStack(spacing: 0) {
             Spacer()
-                .frame(height: 50)
+                .frame(height: 30)
             // MARK: Increment by 1
             HStack(spacing: 32) {
                 Button {
                     score -= 1
-                    print(score)
                 } label: {
                     Text("-")
                 }
@@ -37,7 +36,6 @@ struct EditScoreView: View {
                 
                 Button {
                     score += 1
-                    print(score)
                 } label: {
                     Text("+")
                         
@@ -49,7 +47,6 @@ struct EditScoreView: View {
             HStack {
                 Button {
                     score += 5
-                    print(score)
                 } label: {
                     Text("+ 5")
                 }
@@ -59,7 +56,6 @@ struct EditScoreView: View {
 
                 Button {
                     score += 10
-                    print(score)
                 } label: {
                     Text("+ 10")
                 }
@@ -69,14 +65,13 @@ struct EditScoreView: View {
 
                 Button {
                     score += 20
-                    print(score)
                 } label: {
                     Text("+ 20")
                 }
                 .buttonStyle(ScorcererButtonStyle(width: 100))
             }
             .padding(.horizontal, 24)
-            .padding(.bottom, 8)
+            .padding(.vertical, 8)
             
             CalculatorView(
                 input: $calculatorInput,

@@ -36,7 +36,7 @@ struct PlayerView: View {
             .overlay(
                 RoundedRectangle(cornerRadius: 6)
                     .strokeBorder(.mint, lineWidth: 6)
-                    .stroke(.avocado, lineWidth: 6)
+                    .stroke(.caviar, lineWidth: 6)
                     
             )
         }
@@ -57,7 +57,6 @@ struct PlayerView: View {
     PlayerView(
         player:.constant(
             Player(
-                id: .init(),
                 name: "Maddie",
                 score: 12
             )

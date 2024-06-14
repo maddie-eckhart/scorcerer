@@ -24,10 +24,10 @@ struct CalculatorView: View {
                     .fontWeight(.bold)
                     .foregroundStyle(.caviar)
             }
-            .padding(.top, 12)
-            .padding([.leading, .trailing])
+            .padding(.top, 24)
+            .padding([.leading, .trailing], 24)
             
-            HStack {
+            HStack(spacing: 24) {
                 VStack {
                     Button {
                         operation = .add
@@ -47,7 +47,7 @@ struct CalculatorView: View {
             }
         }
         .padding(.bottom, 12)
-        .background(.banana)
+        .background(.mint)
     }
 }
 
@@ -77,7 +77,7 @@ struct NumButton: View {
         } label: {
             Text(key)
         }
-        .buttonStyle(ScorcererButtonStyle(filled: false))
+        .buttonStyle(ScorcererButtonStyle(width: 80, filled: false))
     }
 }
 

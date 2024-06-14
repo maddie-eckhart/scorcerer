@@ -26,7 +26,6 @@ struct AddPlayerView: View {
             .onSubmit {
                 self.viewModel.playerList.append(
                     Player(
-                        id: .init(),
                         name: newPlayerName,
                         score: 0)
                 )
@@ -38,7 +37,7 @@ struct AddPlayerView: View {
             .textFieldStyle(.roundedBorder)
             .overlay(
                 RoundedRectangle(cornerRadius: 6)
-                    .stroke(.avocado, lineWidth: 6)
+                    .stroke(.lime, lineWidth: 6)
                 
             )
             .padding(.top, 100)
@@ -47,7 +46,6 @@ struct AddPlayerView: View {
             Button {
                 self.viewModel.playerList.append(
                     Player(
-                        id: .init(),
                         name: newPlayerName,
                         score: 0)
                 )
@@ -64,13 +62,13 @@ struct AddPlayerView: View {
             .background(.white)
             .overlay(
                 RoundedRectangle(cornerRadius: 6)
-                    .strokeBorder(.mint, lineWidth: 6)
-                    .stroke(.berry, lineWidth: 6)
+                    .strokeBorder(.lime, lineWidth: 6)
+                    .stroke(.avocado, lineWidth: 6)
                 
             )
             Spacer()
         }
-        .background(.banana)
+        .background(.caviar)
         .onAppear {
             focusedField = .name
         }

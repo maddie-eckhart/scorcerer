@@ -24,10 +24,23 @@ class ScorcererViewModel: ObservableObject {
     func filter() {
         playerList.sort{$0.score > $1.score}
     }
+    
+    func clearScore(of player: Player) {
+        // 🧚🏻 probably a better way to do this
+        if let index = playerList.firstIndex(where: { $0.id == player.id }) {
+            playerList[index] = Player(name: player.name, score: 0)
+        }
+    }
 }
 
 struct Player: Identifiable {
-    var id: UUID = UUID()
+    var id: UUID
     var name: String
     var score: Int
+
+    init(name: String, score: Int) {
+        self.id = UUID()
+        self.name = name
+        self.score = score
+    }
 }

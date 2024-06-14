@@ -21,9 +21,21 @@ struct ContentView: View {
                 ForEach($viewModel.playerList, id: \.id) { $player in
                     PlayerView(player: $player)
                         .padding(.vertical, 8)
-                }
-                .onDelete { index in
-                    viewModel.playerList.remove(atOffsets: index)
+                        .swipeActions {
+                            Button(role: .destructive) {
+                                viewModel.playerList.removeAll(where: { $0.id == $player.id })
+                            } label: {
+                                Text("Delete")
+                            }
+                            .tint(.red)
+                            
+                            Button {
+                                viewModel.clearScore(of: player)
+                            } label: {
+                                Text("Clear")
+                            }
+                            .tint(.gray)
+                        }
                 }
             }
             .listStyle(.inset)
@@ -68,7 +80,6 @@ struct ContentView: View {
             
             Button {
                 viewModel.filter()
-                print("sorted")
             } label: {
                 Image(systemName: "decrease.indent")
                     .resizable()
@@ -83,10 +94,10 @@ struct ContentView: View {
 struct ContentView_Preview: PreviewProvider {
     static var previews: some View {
         let test: [Player] = [
-            Player(id: .init(), name: "Maddie", score: 12),
-            Player(id: .init(), name: "Spencer", score: 40),
-            Player(id: .init(), name: "Katy", score: 231),
-            Player(id: .init(), name: "Alexandra", score: 9)
+            Player(name: "Maddie", score: 12),
+            Player(name: "Spencer", score: 40),
+            Player(name: "Katy", score: 231),
+            Player(name: "Alexandra", score: 9)
         ]
         
         ContentView(viewModel: ScorcererViewModel(playerList: test))

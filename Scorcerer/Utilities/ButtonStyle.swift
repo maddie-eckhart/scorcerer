@@ -20,7 +20,7 @@ struct ScorcererButtonStyle: ButtonStyle {
                 .padding(.all, 12)
                 .foregroundStyle(.caviar)
                 .frame(width: width, height: height)
-                .background(.berry.opacity(0.4))
+                .background(.lime.opacity(0.4))
                 .clipShape(
                     RoundedRectangle(cornerRadius: 10)
                 )
@@ -37,7 +37,7 @@ struct ScorcererButtonStyle: ButtonStyle {
                 )
                 .overlay(
                     RoundedRectangle(cornerRadius: 10)
-                        .strokeBorder(.banana, lineWidth: 3)
+                        .strokeBorder(.avocado, lineWidth: 3)
                 )
         }
     }
@@ -53,7 +53,7 @@ struct ToggleButtonStyle: ButtonStyle {
             .padding(.all, 12)
             .foregroundStyle(.caviar)
             .frame(maxWidth: 60, maxHeight: .infinity)
-            .background(toggled ? .mint.opacity(0.5) : .white.opacity(0.7))
+            .background(toggled ? .avocado.opacity(0.5) : .white.opacity(0.7))
             .clipShape(
                 RoundedRectangle(cornerRadius: 10)
             )
