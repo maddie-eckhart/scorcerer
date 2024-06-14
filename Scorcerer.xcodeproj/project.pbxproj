@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		C169C04F2C12A9A500975B1F /* AddPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C169C04E2C12A9A500975B1F /* AddPlayerView.swift */; };
+		C16D0AA02C1BC97E00388979 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C16D0A9F2C1BC97E00388979 /* LaunchScreen.storyboard */; };
+		C16D0AA62C1BD60700388979 /* Tahoma Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C16D0AA42C1BD60700388979 /* Tahoma Bold.ttf */; };
+		C16D0AA72C1BD60700388979 /* Tahoma.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C16D0AA52C1BD60700388979 /* Tahoma.ttf */; };
 		C1F8B50D2BFE638900FDF12B /* ScorcererApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F8B50C2BFE638900FDF12B /* ScorcererApp.swift */; };
 		C1F8B50F2BFE638900FDF12B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F8B50E2BFE638900FDF12B /* ContentView.swift */; };
 		C1F8B5112BFE638A00FDF12B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1F8B5102BFE638A00FDF12B /* Assets.xcassets */; };
@@ -22,6 +25,10 @@
 
 /* Begin PBXFileReference section */
 		C169C04E2C12A9A500975B1F /* AddPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlayerView.swift; sourceTree = "<group>"; };
+		C16D0A9F2C1BC97E00388979 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C16D0AA32C1BD42300388979 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		C16D0AA42C1BD60700388979 /* Tahoma Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tahoma Bold.ttf"; sourceTree = "<group>"; };
+		C16D0AA52C1BD60700388979 /* Tahoma.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Tahoma.ttf; sourceTree = SOURCE_ROOT; };
 		C1F8B5092BFE638900FDF12B /* Scorcerer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scorcerer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1F8B50C2BFE638900FDF12B /* ScorcererApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScorcererApp.swift; sourceTree = "<group>"; };
 		C1F8B50E2BFE638900FDF12B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -58,6 +65,7 @@
 		C1F8B5002BFE638900FDF12B = {
 			isa = PBXGroup;
 			children = (
+				C16D0A9F2C1BC97E00388979 /* LaunchScreen.storyboard */,
 				C1F8B50B2BFE638900FDF12B /* Scorcerer */,
 				C1F8B50A2BFE638900FDF12B /* Products */,
 			);
@@ -74,6 +82,7 @@
 		C1F8B50B2BFE638900FDF12B /* Scorcerer */ = {
 			isa = PBXGroup;
 			children = (
+				C16D0AA32C1BD42300388979 /* Info.plist */,
 				C1F8B5102BFE638A00FDF12B /* Assets.xcassets */,
 				C1F8B50C2BFE638900FDF12B /* ScorcererApp.swift */,
 				C1F8B51E2BFEBD9400FDF12B /* ScorcererViewModel.swift */,
@@ -97,6 +106,8 @@
 		C1F8B5242C00FB1900FDF12B /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				C16D0AA42C1BD60700388979 /* Tahoma Bold.ttf */,
+				C16D0AA52C1BD60700388979 /* Tahoma.ttf */,
 				C1F8B5222C00FB0800FDF12B /* ButtonStyle.swift */,
 				C1F8B51A2BFE6B6200FDF12B /* Color.swift */,
 			);
@@ -170,7 +181,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C16D0AA02C1BC97E00388979 /* LaunchScreen.storyboard in Resources */,
 				C1F8B5142BFE638A00FDF12B /* Preview Assets.xcassets in Resources */,
+				C16D0AA62C1BD60700388979 /* Tahoma Bold.ttf in Resources */,
+				C16D0AA72C1BD60700388979 /* Tahoma.ttf in Resources */,
 				C1F8B5112BFE638A00FDF12B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -327,9 +341,11 @@
 				DEVELOPMENT_TEAM = KTTGU94DH6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Scorcerer/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
@@ -357,9 +373,11 @@
 				DEVELOPMENT_TEAM = KTTGU94DH6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Scorcerer/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
