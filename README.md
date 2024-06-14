@@ -6,6 +6,7 @@ A simple score-keeping app.
 - Edit a player's score by increments of 1, 5, or 10
 - Use a custom calulator to add/subtract from a player's score
 - Sort player list by highest score
+- Clear a player's score using custom swipe actions
 
 ## Future Features
 - save players
