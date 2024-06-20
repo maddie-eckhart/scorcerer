@@ -30,8 +30,7 @@ struct EditScoreView: View {
                 .buttonStyle(ScorcererButtonStyle())
                 
                 Text("\(score)")
-                    .font(.system(size: 75))
-                    .fontWeight(.bold)
+                    .fontStyle(.bold, .xlarge)
                     .foregroundStyle(.caviar)
                 
                 Button {
@@ -94,8 +93,7 @@ struct EditScoreView: View {
                 HStack {
                     Spacer()
                     Text("Done")
-                        .font(.title3)
-                        .fontWeight(.bold)
+                        .fontStyle(.bold, .small)
                         .foregroundStyle(.caviar)
                         .padding(.all, 12)
                     Spacer()

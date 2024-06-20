@@ -53,8 +53,7 @@ struct AddPlayerView: View {
                 newPlayerName = ""
             } label: {
                 Text("Add Player")
-                    .font(.title3)
-                    .fontWeight(.bold)
+                    .fontStyle(.bold, .small)
                     .foregroundStyle(.caviar)
                     .padding(.all, 12)
             }

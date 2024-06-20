@@ -15,8 +15,7 @@ struct ScorcererButtonStyle: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         if filled {
             configuration.label
-                .font(.title)
-                .fontWeight(.bold)
+                .font(.custom("Tahoma Bold", size: 26))
                 .padding(.all, 12)
                 .foregroundStyle(.caviar)
                 .frame(width: width, height: height)
@@ -26,8 +25,7 @@ struct ScorcererButtonStyle: ButtonStyle {
                 )
         } else {
             configuration.label
-                .font(.title)
-                .fontWeight(.bold)
+                .font(.custom("Tahoma Bold", size: 26))
                 .padding(.all, 12)
                 .foregroundStyle(.caviar)
                 .frame(maxWidth: width, maxHeight: height)

@@ -20,8 +20,7 @@ struct CalculatorView: View {
             HStack {
                 Spacer()
                 Text(input)
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
+                    .fontStyle(.bold, .large)
                     .foregroundStyle(.caviar)
             }
             .padding(.top, 24)
@@ -121,7 +120,7 @@ struct KeyPad: View {
             KeyPadRow(keys: ["1", "2", "3"])
             KeyPadRow(keys: ["4", "5", "6"])
             KeyPadRow(keys: ["7", "8", "9"])
-            KeyPadRow(keys: [".", "0", "⌫"])
+            KeyPadRow(keys: [".", "0", "⏎"])
         }.environment(\.numButtonAction, self.keyWasPressed(_:))
     }
 
@@ -129,7 +128,7 @@ struct KeyPad: View {
         switch key {
         case "." where string.contains("."): break
         case "." where string == "0": string += key
-        case "⌫":
+        case "⏎":
             string.removeLast()
             if string.isEmpty { string = "0" }
         case _ where string == "0": string = key

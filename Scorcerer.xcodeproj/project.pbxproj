@@ -11,6 +11,7 @@
 		C16D0AA02C1BC97E00388979 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C16D0A9F2C1BC97E00388979 /* LaunchScreen.storyboard */; };
 		C16D0AA62C1BD60700388979 /* Tahoma Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C16D0AA42C1BD60700388979 /* Tahoma Bold.ttf */; };
 		C16D0AA72C1BD60700388979 /* Tahoma.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C16D0AA52C1BD60700388979 /* Tahoma.ttf */; };
+		C16D0AA92C24C44000388979 /* FontStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16D0AA82C24C44000388979 /* FontStyle.swift */; };
 		C1F8B50D2BFE638900FDF12B /* ScorcererApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F8B50C2BFE638900FDF12B /* ScorcererApp.swift */; };
 		C1F8B50F2BFE638900FDF12B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F8B50E2BFE638900FDF12B /* ContentView.swift */; };
 		C1F8B5112BFE638A00FDF12B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1F8B5102BFE638A00FDF12B /* Assets.xcassets */; };
@@ -29,6 +30,7 @@
 		C16D0AA32C1BD42300388979 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		C16D0AA42C1BD60700388979 /* Tahoma Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tahoma Bold.ttf"; sourceTree = "<group>"; };
 		C16D0AA52C1BD60700388979 /* Tahoma.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Tahoma.ttf; sourceTree = SOURCE_ROOT; };
+		C16D0AA82C24C44000388979 /* FontStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontStyle.swift; sourceTree = "<group>"; };
 		C1F8B5092BFE638900FDF12B /* Scorcerer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scorcerer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1F8B50C2BFE638900FDF12B /* ScorcererApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScorcererApp.swift; sourceTree = "<group>"; };
 		C1F8B50E2BFE638900FDF12B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				C16D0AA52C1BD60700388979 /* Tahoma.ttf */,
 				C1F8B5222C00FB0800FDF12B /* ButtonStyle.swift */,
 				C1F8B51A2BFE6B6200FDF12B /* Color.swift */,
+				C16D0AA82C24C44000388979 /* FontStyle.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 				C1F8B50F2BFE638900FDF12B /* ContentView.swift in Sources */,
 				C1F8B50D2BFE638900FDF12B /* ScorcererApp.swift in Sources */,
 				C1F8B5212BFF0FA100FDF12B /* EditScoreView.swift in Sources */,
+				C16D0AA92C24C44000388979 /* FontStyle.swift in Sources */,
 				C169C04F2C12A9A500975B1F /* AddPlayerView.swift in Sources */,
 				C1F8B51B2BFE6B6200FDF12B /* Color.swift in Sources */,
 				C1F8B5272C052D5700FDF12B /* CalculatorView.swift in Sources */,

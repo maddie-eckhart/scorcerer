@@ -71,7 +71,7 @@ struct ContentView: View {
     @ViewBuilder
     var header: some View {
         HStack {
-            Text("Players")
+            Text("Players") // TODO: change header
                 .font(.largeTitle)
                 .fontWeight(.medium)
                 .foregroundStyle(.caviar)

@@ -15,8 +15,7 @@ struct PlayerView: View {
 
         HStack {
             Text(player.name)
-                .font(.title)
-                .fontWeight(.bold)
+                .fontStyle(.bold, .medium)
                 .foregroundStyle(.caviar)
             
             Spacer()
@@ -25,8 +24,7 @@ struct PlayerView: View {
                 showEditScoreOverlay.toggle()
             } label: {
                 Text("\(player.score)")
-                    .font(.title3)
-                    .fontWeight(.bold)
+                    .fontStyle(.bold, .small)
                     .foregroundStyle(.caviar)
                     .padding(.all, 12)
                     
