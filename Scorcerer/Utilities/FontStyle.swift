@@ -8,6 +8,7 @@
 import SwiftUI
 
 enum FontWeight {
+    case title
     case regular
     case bold
 }
@@ -22,6 +23,8 @@ enum FontSize: CGFloat {
 extension Font {
     static let fontStyle: (FontWeight, CGFloat) -> Font = { fontType, size in
         switch fontType {
+        case .title:
+            Font.custom("Didot", size: size).bold()
         case .regular:
             Font.custom("Tahoma", size: size)
         case .bold:

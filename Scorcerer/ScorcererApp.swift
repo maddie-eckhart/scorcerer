@@ -12,7 +12,7 @@ struct ScorcererApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView(viewModel: ScorcererViewModel())
+            MainView()
         }
     }
 }

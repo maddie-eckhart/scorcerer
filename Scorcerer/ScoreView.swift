@@ -7,16 +7,15 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct ScoreView: View {
     @StateObject var viewModel: ScorcererViewModel
 
     @State var showAddPlayerOverlay: Bool = false
     @State var newPlayerName: String = ""
 
     var body: some View {
-        VStack {
+        VStack(spacing: 0) {
             header
-                .padding(.all, 24)
             List {
                 ForEach($viewModel.playerList, id: \.id) { $player in
                     PlayerView(player: $player)
@@ -38,9 +37,8 @@ struct ContentView: View {
                         }
                 }
             }
+            .padding(.bottom, -8)
             .listStyle(.inset)
-            
-            Spacer()
 
             // MARK: Add players
 
@@ -58,7 +56,8 @@ struct ContentView: View {
                 }
                 .padding()
             }
-            .background(.black.opacity(0.2))
+            .background(.banana)
+            .padding(.bottom, 16)
         }
         .sheet(isPresented: $showAddPlayerOverlay) {
             AddPlayerView(
@@ -71,12 +70,22 @@ struct ContentView: View {
     @ViewBuilder
     var header: some View {
         HStack {
-            Text("Players") // TODO: change header
+            Image("avocado-spark")
+                .resizable()
+                .frame(width: 40, height: 30)
+                .padding(.bottom, 8)
+            Text("Scorcerer")
+                .fontStyle(.title, .large)
                 .font(.largeTitle)
                 .fontWeight(.medium)
-                .foregroundStyle(.caviar)
-
+                .foregroundStyle(.white)
+            
             Spacer()
+            
+            Image("lime-spark")
+                .resizable()
+                .frame(width: 40, height: 40)
+                .padding(.trailing, 8)
             
             Button {
                 viewModel.filter()
@@ -84,10 +93,13 @@ struct ContentView: View {
                 Image(systemName: "decrease.indent")
                     .resizable()
                     .renderingMode(.template)
-                    .foregroundStyle(.caviar)
+                    .foregroundStyle(.white)
                     .frame(width: 24, height: 18)
             }
         }
+        .padding(.horizontal, 24)
+        .padding(.bottom, 24)
+        .background(.caviar)
     }
 }
 
@@ -100,6 +112,6 @@ struct ContentView_Preview: PreviewProvider {
             Player(name: "Alexandra", score: 9)
         ]
         
-        ContentView(viewModel: ScorcererViewModel(playerList: test))
+        ScoreView(viewModel: ScorcererViewModel(playerList: test))
     }
 }

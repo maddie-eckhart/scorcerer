@@ -18,7 +18,7 @@ class ScorcererViewModel: ObservableObject {
     ]
 
     init(playerList: [Player] = []) {
-        self.playerList = test
+        self.playerList = []
     }
     
     func filter() {
