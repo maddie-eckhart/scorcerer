@@ -47,12 +47,12 @@ struct Scolor_Preview: PreviewProvider {
                 
             } label: {
                 Spacer()
-                Text("Mint")
-                    .foregroundStyle(.caviar)
+                Text("Dill")
+                    .foregroundStyle(.dill)
                     .padding(.all, 24)
                 Spacer()
             }
-            .background(.mint)
+            .background(.dill)
             
             Button {
                 

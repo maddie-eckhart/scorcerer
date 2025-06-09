@@ -33,7 +33,7 @@ struct PlayerView: View {
             .background(.white)
             .overlay(
                 RoundedRectangle(cornerRadius: 6)
-                    .strokeBorder(.mint, lineWidth: 6)
+                    .strokeBorder(.dill, lineWidth: 6)
                     .stroke(.caviar, lineWidth: 6)
                     
             )

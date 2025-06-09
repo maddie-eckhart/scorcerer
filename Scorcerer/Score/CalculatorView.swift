@@ -46,7 +46,7 @@ struct CalculatorView: View {
             }
         }
         .padding(.bottom, 12)
-        .background(.mint)
+        .background(.dill)
     }
 }
 
