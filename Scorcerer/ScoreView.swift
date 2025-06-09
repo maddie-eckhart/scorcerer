@@ -9,13 +9,15 @@ import SwiftUI
 
 struct ScoreView: View {
     @StateObject var viewModel: ScorcererViewModel
-
+    
     @State var showAddPlayerOverlay: Bool = false
     @State var newPlayerName: String = ""
-
+    
     var body: some View {
         VStack(spacing: 0) {
-            header
+            HeaderView(type: .score) {
+                viewModel.filter()
+            }
             List {
                 ForEach($viewModel.playerList, id: \.id) { $player in
                     PlayerView(player: $player)
@@ -39,9 +41,9 @@ struct ScoreView: View {
             }
             .padding(.bottom, -8)
             .listStyle(.inset)
-
+            
             // MARK: Add players
-
+            
             Button {
                 showAddPlayerOverlay.toggle()
             } label: {
@@ -65,41 +67,6 @@ struct ScoreView: View {
                 showAddPlayerOverlay: $showAddPlayerOverlay
             )
         }
-    }
-    
-    @ViewBuilder
-    var header: some View {
-        HStack {
-            Image("avocado-spark")
-                .resizable()
-                .frame(width: 40, height: 30)
-                .padding(.bottom, 8)
-            Text("Scorcerer")
-                .fontStyle(.title, .large)
-                .font(.largeTitle)
-                .fontWeight(.medium)
-                .foregroundStyle(.white)
-            
-            Spacer()
-            
-            Image("lime-spark")
-                .resizable()
-                .frame(width: 40, height: 40)
-                .padding(.trailing, 8)
-            
-            Button {
-                viewModel.filter()
-            } label: {
-                Image(systemName: "decrease.indent")
-                    .resizable()
-                    .renderingMode(.template)
-                    .foregroundStyle(.white)
-                    .frame(width: 24, height: 18)
-            }
-        }
-        .padding(.horizontal, 24)
-        .padding(.bottom, 24)
-        .background(.caviar)
     }
 }
 

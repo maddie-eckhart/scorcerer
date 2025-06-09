@@ -15,7 +15,7 @@ struct MainView: View {
                     Label("Scores", systemImage: "list.dash")
                 }
 
-            ScoreView(viewModel: ScorcererViewModel())
+            FirstPlayerView()
                 .tabItem {
                     Label("First Player", systemImage: "person")
                 }
