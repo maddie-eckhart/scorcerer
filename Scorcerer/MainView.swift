@@ -15,7 +15,7 @@ struct MainView: View {
                     Label("Scores", systemImage: "list.dash")
                 }
 
-            FirstPlayerView()
+            TapToJoinView()
                 .tabItem {
                     Label("First Player", systemImage: "person")
                 }

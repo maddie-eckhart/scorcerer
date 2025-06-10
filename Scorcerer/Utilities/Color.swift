@@ -48,7 +48,7 @@ struct Scolor_Preview: PreviewProvider {
             } label: {
                 Spacer()
                 Text("Dill")
-                    .foregroundStyle(.dill)
+                    .foregroundStyle(.caviar)
                     .padding(.all, 24)
                 Spacer()
             }
