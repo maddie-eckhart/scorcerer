@@ -39,14 +39,17 @@ struct PlayerView: View {
             )
         }
         .sheet(isPresented: $showEditScoreOverlay) {
-            EditScoreView(score: Binding<Int>(
-                get: {
-                    return player.score
-                },
-                set: { score, _ in
-                    player.score = score
-                }
-            ))
+            EditScoreView(
+                score: Binding<Int>(
+                    get: {
+                        return player.score
+                    },
+                    set: { score, _ in
+                        player.score = score
+                    }
+                ),
+                playerName: player.name
+            )
         }
     }
 }

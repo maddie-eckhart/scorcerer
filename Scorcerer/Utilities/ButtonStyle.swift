@@ -42,7 +42,6 @@ struct ScorcererButtonStyle: ButtonStyle {
 }
 
 struct ToggleButtonStyle: ButtonStyle {
-    var toggled: Bool = true
 
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
@@ -51,7 +50,7 @@ struct ToggleButtonStyle: ButtonStyle {
             .padding(.all, 12)
             .foregroundStyle(.caviar)
             .frame(maxWidth: 60, maxHeight: .infinity)
-            .background(toggled ? .avocado.opacity(0.5) : .white.opacity(0.7))
+            .background(configuration.isPressed ? .avocado.opacity(0.5) : .white.opacity(0.7))
             .clipShape(
                 RoundedRectangle(cornerRadius: 10)
             )
@@ -78,9 +77,10 @@ struct ScorcererButtonStyle_Preview: PreviewProvider {
             Button {
                 
             } label: {
-                Text("+ 12")
+                Text("+")
             }
-            .buttonStyle(ToggleButtonStyle(toggled: false))
+            .background(.dill)
+            .buttonStyle(ToggleButtonStyle())
         }
     }
 }

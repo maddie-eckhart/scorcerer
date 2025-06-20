@@ -9,15 +9,13 @@ import SwiftUI
 
 struct EditScoreView: View {
     @Binding var score: Int
-    @State var calculatorInput: String = "0"
-    @State var operation: MathOperation = .none
-    
-    var isButtonDisabled: Bool {
-        calculatorInput == "0" || operation == .none
-    }
+    @State var playerName: String
 
     var body: some View {
         VStack(spacing: 0) {
+            Text(playerName)
+                .fontStyle(.bold, .medium)
+                .foregroundStyle(.caviar)
             Spacer()
                 .frame(height: 30)
             // MARK: Increment by 1
@@ -73,34 +71,9 @@ struct EditScoreView: View {
             .padding(.vertical, 8)
             
             CalculatorView(
-                input: $calculatorInput,
-                operation: $operation
+                score: $score
             )
-            
-            Button {
-                switch operation {
-                case .none:
-                    break
-                case .add:
-                    score += Int(calculatorInput) ?? 0
-                case .subtract:
-                    score -= Int(calculatorInput) ?? 0
-                }
-                operation = .none
-                calculatorInput = "0"
-                
-            } label: {
-                HStack {
-                    Spacer()
-                    Text("Done")
-                        .fontStyle(.bold, .small)
-                        .foregroundStyle(.caviar)
-                        .padding(.all, 12)
-                    Spacer()
-                }
-            }
-            .disabled(isButtonDisabled)
-            .background(isButtonDisabled ? .black.opacity(0.2) : .white)
+            .padding(.bottom, 30)
         }
         .presentationDetents([.height(600)])
     }
@@ -108,10 +81,6 @@ struct EditScoreView: View {
 
 struct EditScore_Preview: PreviewProvider {
     static var previews: some View {
-        EditScoreView(score: .constant(12))
+        EditScoreView(score: .constant(12), playerName: "Maddie")
     }
 }
-
-/// TODO:
-/// - reusable button
-/// - width when horizontal

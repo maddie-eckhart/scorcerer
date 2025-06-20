@@ -12,8 +12,8 @@ enum MathOperation {
 }
 
 struct CalculatorView: View {
-    @Binding var input: String
-    @Binding var operation: MathOperation
+    @Binding var score: Int
+    @State var input: String = "0"
     
     var body: some View {
         VStack {
@@ -23,29 +23,32 @@ struct CalculatorView: View {
                     .fontStyle(.bold, .large)
                     .foregroundStyle(.caviar)
             }
-            .padding(.top, 24)
+            .padding(.top, 16)
             .padding([.leading, .trailing], 24)
             
             HStack(spacing: 24) {
+                KeyPad(string: $input)
                 VStack {
                     Button {
-                        operation = .add
+                        score += Int(input) ?? 0
+                        input = "0"
                     } label: {
                         Text("+")
                     }
-                    .buttonStyle(ToggleButtonStyle(toggled: operation == .add))
+                    .buttonStyle(ToggleButtonStyle())
                     
                     Button {
-                        operation = .subtract
+                        score -= Int(input) ?? 0
+                        input = "0"
                     } label: {
                         Text("-")
                     }
-                    .buttonStyle(ToggleButtonStyle(toggled: operation == .subtract))
+                    .buttonStyle(ToggleButtonStyle())
                 }
-                KeyPad(string: $input)
             }
         }
-        .padding(.bottom, 12)
+        .frame(height: 326)
+        .padding(.bottom, 16)
         .background(.dill)
     }
 }
@@ -53,8 +56,7 @@ struct CalculatorView: View {
 struct ContentView_Previews : PreviewProvider {
     static var previews: some View {
         CalculatorView(
-            input: .constant("0"),
-            operation: .constant(.add)
+            score: .constant(5)
         )
     }
 }
@@ -120,7 +122,7 @@ struct KeyPad: View {
             KeyPadRow(keys: ["1", "2", "3"])
             KeyPadRow(keys: ["4", "5", "6"])
             KeyPadRow(keys: ["7", "8", "9"])
-            KeyPadRow(keys: [".", "0", "⏎"])
+            KeyPadRow(keys: [".", "0", "←"])
         }.environment(\.numButtonAction, self.keyWasPressed(_:))
     }
 
@@ -128,7 +130,7 @@ struct KeyPad: View {
         switch key {
         case "." where string.contains("."): break
         case "." where string == "0": string += key
-        case "⏎":
+        case "←":
             string.removeLast()
             if string.isEmpty { string = "0" }
         case _ where string == "0": string = key
